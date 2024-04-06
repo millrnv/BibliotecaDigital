@@ -39,12 +39,20 @@ public abstract class Usuario {
 		this.correo = correo;
 	}
 
+
+	//?????
+	public void recibirNotificacionDevolucion(){
+		System.out.println("Notificación de devolución enviada a: " + this.nombreUsuario);
+
+	}
+
 	public Usuario(String nombreUsuario, String id, int nTelefono, String correo) {
 		this.nombreUsuario = nombreUsuario;
 		this.id = id;
 		this.nTelefono = nTelefono;
 		this.correo = correo;
 	}
+
 
 	public abstract String getTipo();
 }

@@ -4,8 +4,8 @@ public class RecursoDigital {
 	protected String titulo;
 	protected String autor;
 	protected int anioPublicacion;
-	protected String[] clasificacion;
 	private Prestamo prestamo;
+	private Clasificacion clasificacion;
 
 	//métodos getter y setter
 	public String getTitulo() {
@@ -32,15 +32,15 @@ public class RecursoDigital {
 		this.anioPublicacion = anioPublicacion;
 	}
 
-	public String[] getClasificacion() {
+	public Clasificacion getClasificacion() {
 		return this.clasificacion;
 	}
 
-	public void setClasificacion(String[] clasificacion) {
+	public void setClasificacion(Clasificacion clasificacion) {
 		this.clasificacion = clasificacion;
 	}
 
-	public RecursoDigital(String titulo, String autor, int anioPublicacion, String[] clasificacion) {
+	public RecursoDigital(String titulo, String autor, int anioPublicacion, Clasificacion clasificacion) {
 
 		this.titulo = titulo;
 		this.autor = autor;
