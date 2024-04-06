@@ -4,7 +4,7 @@ public class RecursoDigital {
 	protected String titulo;
 	protected String autor;
 	protected int anioPublicacion;
-	private Prestamo prestamo;
+	protected boolean accesoPublico;
 	private Clasificacion clasificacion;
 
 	//métodos getter y setter
@@ -32,6 +32,14 @@ public class RecursoDigital {
 		this.anioPublicacion = anioPublicacion;
 	}
 
+	public boolean getAccesoPublico() {
+		return this.accesoPublico;
+	}
+
+	public void setAccesoPublico(boolean accesoPublico) {
+		this.accesoPublico = accesoPublico;
+	}
+
 	public Clasificacion getClasificacion() {
 		return this.clasificacion;
 	}
@@ -40,9 +48,11 @@ public class RecursoDigital {
 		this.clasificacion = clasificacion;
 	}
 
-	public RecursoDigital(String titulo, String autor, int anioPublicacion, Clasificacion clasificacion) {
+
+	public RecursoDigital(String titulo, boolean acceso, String autor, int anioPublicacion, Clasificacion clasificacion) {
 
 		this.titulo = titulo;
+		this.accesoPublico = acceso;
 		this.autor = autor;
 		this.anioPublicacion = anioPublicacion;
 		this.clasificacion = clasificacion;

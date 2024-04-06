@@ -2,9 +2,9 @@ package modelo;
 
 public class Libro extends RecursoDigital {
 
-    public Libro (String titulo, String autor, int anioPublicacion, String[] clasificacion) {
+    public Libro (String titulo, boolean accesoPublico, String autor, int anioPublicacion, Clasificacion clasificacion) {
 
-        super(titulo, autor, anioPublicacion, clasificacion);
+        super(titulo, accesoPublico,autor, anioPublicacion, clasificacion);
     }
 
 

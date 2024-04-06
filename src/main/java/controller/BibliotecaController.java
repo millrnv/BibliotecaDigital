@@ -1,4 +1,4 @@
-package org.example;
+package controller;
 
 
 import modelo.*;
@@ -18,10 +18,7 @@ public class BibliotecaController {
         Profesor profesor1 = new Profesor("Pedro", "789", 9876543, "pedro@ufro.cl");
         Profesor profesor2 = new Profesor("Ana", "101", 1010101, "ana@ufro.cl");
 
-        //Crear recursos digitales cualesquiera
-        RecursoDigital recurso1 = new RecursoDigital("LibroMates1", "Autor1", 1995, Clasificacion.MATEMATICAS);
-        RecursoDigital recurso2 = new RecursoDigital("LibroLenguaje1", "Autor2", 2001, Clasificacion.LENGUAJE);
-        RecursoDigital recurso3 = new RecursoDigital("LibroHistoria1", "Autor3", 2010, Clasificacion.HISTORIA);
+
     }
 
 

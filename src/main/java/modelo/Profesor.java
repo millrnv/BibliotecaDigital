@@ -9,4 +9,11 @@ public class Profesor extends Usuario {
 	public String getTipo() {
 		return "Profesor";
 	}
+
+	@Override
+	public String toString() {
+		return "Profesor [nombreUsuario=" + nombreUsuario + ", id=" + id + ", nTelefono=" + nTelefono + ", correo="
+				+ correo + "]";
+	}
+
 }

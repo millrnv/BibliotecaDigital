@@ -3,6 +3,7 @@ package modelo;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.Prestamo;
 
 public class BibliotecaDigital {
 	private String nombreBiblioteca;
@@ -23,8 +24,15 @@ public class BibliotecaDigital {
 
 
 	//metodos de la clase
-	public void realizarPrestamo(Prestamo prestamo) {
-		prestamos.add(prestamo);
+	public void realizarPrestamo(Usuario usuario, RecursoDigital recurso) {
+		if (usuario instanceof Profesor || recurso.getAccesoPublico()) {
+			Prestamo nuevoPrestamo = new Prestamo(LocalDate.now(), LocalDate.now().plusDays(7), usuario, recurso);
+			this.prestamos.add(nuevoPrestamo);
+			System.out.println("Préstamo realizado con éxito.");
+		} else {
+			System.out.println("Este recurso es privado y solo está disponible para profesores.");
+		}
+
 	}
 
 	public void devolverRecurso(Prestamo prestamo) {
@@ -68,7 +76,6 @@ public class BibliotecaDigital {
 		return recursosPorAnio;
 	}
 
-	//falta este metodo
 	public List<RecursoDigital> buscarRecursoPorClasificacion(Clasificacion clasificacion) {
 		List<RecursoDigital> recursosPorClasificacion = new ArrayList<RecursoDigital>();
 		for (RecursoDigital recurso : recursos) {
@@ -77,10 +84,10 @@ public class BibliotecaDigital {
 			}
 		}
 		return recursosPorClasificacion;
+
 	}
 
 
-	//??????
 	public void enviarNotificacionDevolucion(Prestamo prestamo) {
 		for (Prestamo prestamoRegistrado : prestamos) {
 			if (prestamoRegistrado.equals(prestamo)) {
@@ -100,9 +107,11 @@ public class BibliotecaDigital {
 		recursos.remove(recursoDigital);
 	}
 
-	//metodo para darle recomendaciones a los usuarios segun sus prestamos anteriores
+
 	public void darRecomendacion(Usuario usuario) {
+
 	}
+
 
 
 

@@ -5,7 +5,7 @@ public abstract class Usuario {
 	protected String id;
 	protected int nTelefono;
 	protected String correo;
-	private Prestamo prestamo;
+
 
 	public String getNombreUsuario() {
 		return this.nombreUsuario;
@@ -55,4 +55,10 @@ public abstract class Usuario {
 
 
 	public abstract String getTipo();
+
+	@Override
+	public String toString() {
+		return "Usuario [nombreUsuario=" + nombreUsuario + ", id=" + id + ", nTelefono=" + nTelefono + ", correo="
+				+ correo + "]";
+	}
 }

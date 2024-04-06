@@ -2,9 +2,9 @@ package modelo;
 
 public class TesisDeGrado extends RecursoDigital {
 
-    public TesisDeGrado (String titulo, String autor, int anioPublicacion, String[] clasificacion) {
+    public TesisDeGrado (String titulo, boolean accesoPublico, String autor, int anioPublicacion, Clasificacion clasificacion) {
 
-        super(titulo, autor, anioPublicacion, clasificacion);
+        super(titulo, accesoPublico,autor, anioPublicacion, clasificacion);
     }
 
 
